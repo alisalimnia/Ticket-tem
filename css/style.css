@@ -2,26 +2,63 @@
 @charset "UTF-8";
 
 @font-face {
+    font-family: iranyekan;
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/iranyekan/eot/iranyekanweblight(fanum).eot');
+    src: url('../fonts/iranyekan/eot/iranyekanweblight(fanum).eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+    url('../fonts/iranyekan/woff2/iranyekanweblight(fanum).woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+    url('../fonts/iranyekan/woff/iranyekanweblight(fanum).woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('../fonts/iranyekan/ttf/iranyekanweblight(fanum).ttf') format('truetype');
+}
+
+
+@font-face {
+    font-family: iranyekan;
+    font-style: normal;
+    font-weight: bold;
+    src: url('../fonts/iranyekan/eot/iranyekanwebbold(fanum).eot');
+    src: url('../fonts/iranyekan/eot/iranyekanwebbold(fanum).eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+    url('../fonts/iranyekan/woff2/iranyekanwebbold(fanum).woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+    url('../fonts/iranyekan/woff/iranyekanwebbold(fanum).woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('../fonts/iranyekan/ttf/iranyekanwebbold(fanum).ttf') format('truetype');
+}
+
+@font-face {
+    font-family: iranyekan;
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/iranyekan/eot/iranyekanwebregular(fanum).eot');
+    src: url('../fonts/iranyekan/eot/iranyekanwebregular(fanum).eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+    url('../fonts/iranyekan/woff2/iranyekanwebregular(fanum).woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+    url('../fonts/iranyekan/woff/iranyekanwebregular(fanum).woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('../fonts/iranyekan/ttf/iranyekanwebregular(fanum).ttf') format('truetype');
+}
+@font-face {
     font-family: 'Vazir';
     src: url('../fonts/Vazir.eot');
     src: local('../fonts/Vazir'), url('../fonts/Vazir.woff') format('woff'), url('../fonts/Vazir.ttf') format('truetype');
-}
+   }
 
 * {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-family: 'iranyekan','Vazir', sans-serif;
 }
 
 body, html {
     height: 100%;
-    font-family: 'Vazir', sans-serif;
+    font-family: 'iranyekan','Vazir', sans-serif;
     direction: rtl;
 }
 
+.form-select {
+    font-family: 'iranyekan';
+}
 /*---------------------------------------------*/
 a {
-    font-family: 'Vazir';
+    font-family: 'iranyekan';
     font-size: 14px;
     line-height: 1.7;
     color: #666666;
@@ -47,7 +84,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p {
-    font-family: 'Vazir';
+    font-family: 'iranyekan';
     font-size: 14px;
     line-height: 1.7;
     color: #666666;
@@ -158,7 +195,7 @@ iframe {
 /*//////////////////////////////////////////////////////////////////
 [ Utility ]*/
 .txt1 {
-    font-family: 'Vazir';
+    font-family: 'iranyekan';
     font-size: 13px;
     line-height: 1.5;
     color: #999999;
@@ -196,11 +233,11 @@ a.txt2:hover {
     justify-content: center;
     align-items: center;
     padding: 15px;
-    background: #9053c7;
-    background: -webkit-linear-gradient(-135deg, #4158d0, #db70d4, #4158d0);
+    background: #0D6EFD;
+    /* background: -webkit-linear-gradient(-135deg, #4158d0, #db70d4, #4158d0);
     background: -o-linear-gradient(-135deg, #4158d0, #c850c0, #4158d0);
     background: -moz-linear-gradient(-135deg, #4158d0, #c850c0, #4158d0);
-    background: linear-gradient(-135deg, #4158d0, #c850c0, #4158d0);
+    background: linear-gradient(-135deg, #4158d0, #c850c0, #4158d0); */
 }
 
 .wrap-login100 {
@@ -216,13 +253,13 @@ a.txt2:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 177px 130px 33px 95px;
+    padding: 100px 130px 33px 95px;
 }
 
 /*------------------------------------------------------------------
 [  ]*/
 .login100-pic {
-    width: 316px;
+    width: 150px;
 }
 
 .login100-pic img {
@@ -232,12 +269,12 @@ a.txt2:hover {
 
 /*------------------------------------------------------------------
 [  ]*/
-.login100-form {
+/* .login100-form {
     width: 290px;
-}
+} */
 
 .login100-form-title {
-    font-family: 'Vazir';
+    font-family: 'iranyekan';
     font-size: 24px;
     color: #666;
     line-height: 1.2;
@@ -390,15 +427,16 @@ a.txt2:hover {
 
 @media (max-width: 992px) {
     .wrap-login100 {
-        padding: 177px 85px 33px 90px;
+        padding: 100px 85px 33px 90px;
     }
 
     .login100-pic {
         width: 35%;
+       
     }
 
     .login100-form {
-        width: 50%;
+        width: 100%;
     }
 }
 
@@ -488,4 +526,10 @@ a.txt2:hover {
         visibility: visible;
         opacity: 1;
     }
+}
+.filter-option{
+    width: fit-content !important;
+}
+.dropdown-item{
+    text-align: right !important;
 }
